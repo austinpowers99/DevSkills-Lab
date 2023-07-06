@@ -29,15 +29,14 @@ function deleteSkill(req, res) {
 }
 
 function create(req, res) {
-    // console.log(req.body);
-    // The model is responsible for creating data
     Skill.create(req.body);
-    // Do a redirect anytime data is changed
     res.redirect('/skills');
-  }
+}
 
 function newSkill(req, res) {
-    res.render('skills/new', {title: 'New Skill' });
+    res.render('skills/new', {
+        title: 'New Skill' 
+    });
 }
 
 function show(req, res) {

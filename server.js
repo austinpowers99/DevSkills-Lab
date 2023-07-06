@@ -14,6 +14,8 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(methodOverride('_method'))
+
 app.use(function(req, res, next) {
   res.locals.time = new Date().toLocaleTimeString();
   next();
